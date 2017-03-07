@@ -6,11 +6,10 @@ logger = logging.getLogger(__name__)
 def pytest_configure(config):
     """Activate the plugin."""
 
-    if config.getvalue('pytui'):
-        runner = PytestRunner('.') # TODO: get path, if needed
-        plugin = PytestPlugin(config, runner)
+    runner = PytestRunner('.') # TODO: get path, if needed
+    plugin = PytestPlugin(config, runner)
 
-        config.pluginmanager.register(plugin, '_pytui')
+    config.pluginmanager.register(plugin, '_pytui')
 
 
 class PytestPlugin(object):
