@@ -1,10 +1,12 @@
 import logging
 
+
 logger = logging.getLogger(__name__)
 
 
 def pytest_configure(config):
     """Activate the plugin."""
+    from runner import PytestRunner
 
     runner = PytestRunner('.') # TODO: get path, if needed
     plugin = PytestPlugin(config, runner)
