@@ -254,22 +254,21 @@ class Store(object):
 
 class TestRunnerUI(object):
     palette = [
-        ('reversed',    '',           'dark green'),
-        ('edit',        '',           'black',    '', '',     '#008'),
-        ('edit_focus',  '',           'dark gray',   '', '',     '#00b'),
-        ('statusline',  'white',      'dark blue',    '', '',     ''),
+        ('reversed',    '',              'dark green'),
+        ('edit',        '',              'black',       '', '',     '#008'),
+        ('edit_focus',  '',              'dark gray',   '', '',     '#00b'),
+        ('statusline',  'white',         'dark blue',   '', '',     ''),
 
         # result states
-        ('failed',      'light red',  '',             '', '',     '#b00'),
-        ('error',       'brown',      '',             '', '#f88', '#b00'),
-        ('skipped',     'light gray', '',             '', '#f88', '#b00'),
-        ('ok',          'dark green', '',             '', '',     ''),
-
+        ('failed',      'light red',     '',            '', '',     '#b00'),
+        ('error',       'dark magenta',  '',            '', '#f88', '#b00'),
+        ('skipped',     'brown',         '',            '', '#f88', '#b00'),
+        ('ok',          'dark green',    '',            '', '',     ''),
 
         # run states
-        ('setup',       'white',      'dark blue',             '', '',     ''),
-        ('call',        'white',      'dark blue',             '', '',     ''),
-        ('teardown',    'white',      'dark blue',             '', '',     ''),
+        ('setup',       'white',         'dark blue',    '', '',    ''),
+        ('call',        'white',         'dark blue',    '', '',    ''),
+        ('teardown',    'white',         'dark blue',    '', '',    ''),
     ]
 
     def __init__(self, runner_class, path):
